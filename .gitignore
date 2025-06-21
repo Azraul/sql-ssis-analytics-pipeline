@@ -200,6 +200,7 @@ __pycache__/
 .venv/
 venv/
 env/
+.dump/
 
 # IDE and OS files
 .vscode/
@@ -217,6 +218,10 @@ credentials.*
 # Tracked manually for 
 *.csv
 *.zip
+*.xlsb
+
+# output folder for processed data
+processed_data/
 
 # SSIS Project files
 *.dtproj.user
