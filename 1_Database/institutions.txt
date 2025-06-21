@@ -1,0 +1,102 @@
+Aalto-universitetet
+Aalto-universitetet, Handelshögskola
+Aalto-universitetet, Handelshögskola, Handelshögskola Mikkeli kampus
+Aalto-universitetet, Högskolan för elektroteknik
+Aalto-universitetet, Högskolan för ingenjörsvetenskaper
+Aalto-universitetet, Högskolan för kemiteknik
+Aalto-universitetet, Högskolan för konst design och arkitektur
+Aalto-universitetet, Högskolan för teknikvetenskaper
+Försvarshögskolan
+Helsingfors universitet
+Helsingfors universitet, Agrikultur-forstvetenskapliga fakulteten
+Helsingfors universitet, Bio- och miljövetenskapliga fakulteten
+Helsingfors universitet, Farmaceutiska fakulteten
+Helsingfors universitet, Humanistiska fakulteten
+Helsingfors universitet, Juridiska fakulteten
+Helsingfors universitet, Juridiska fakulteten, Juridiska utbildningen i Vasa
+Helsingfors universitet, Matematisk-naturvetenskapliga fakulteten
+Helsingfors universitet, Medicinska fakulteten
+Helsingfors universitet, Pedagogiska fakulteten
+Helsingfors universitet, Statsvetenskapliga fakulteten
+Helsingfors universitet, Svenska social- och kommunalhögskolan vid Helsingfors universitet
+Helsingfors universitet, Svenska social- och kommunalhögskolan vid Helsingfors universitet, Utbildningen i socialt arbete i Vasa
+Helsingfors universitet, Teologiska fakulteten
+Helsingfors universitet, Veterinärmedicinska fakulteten
+Jyväskylä universitet
+Jyväskylä universitet, Handelshögskolan vid Jyväskylä universitet
+Jyväskylä universitet, Humanistis-yhteiskuntatieteellinen tiedekunta
+Jyväskylä universitet, Idrottsvetenskapliga fakulteten
+Jyväskylä universitet, Idrottsvetenskapliga fakulteten, Liikuntateknologian yksikkö
+Jyväskylä universitet, Informaatioteknologian tiedekunta
+Jyväskylä universitet, Kasvatustieteiden ja psykologian tiedekunta
+Jyväskylä universitet, Kokkolan yliopistokeskus Chydenius (Jyväskylän yliopisto)
+Jyväskylä universitet, Matemaattis-luonnontieteellinen tiedekunta
+Konstuniversitetet
+Konstuniversitetet, Bildkonstakademin
+Konstuniversitetet, Sibelius-Akademin
+Konstuniversitetet, Teaterhögskolan
+Lapin yliopisto
+Lapin yliopisto, Kasvatustieteiden tiedekunta
+Lapin yliopisto, Oikeustieteiden tiedekunta
+Lapin yliopisto, Taiteiden tiedekunta
+Lapin yliopisto, Yhteiskuntatieteiden tiedekunta
+Lappeenrannan-Lahden teknillinen yliopisto LUT
+Lappeenrannan-Lahden teknillinen yliopisto LUT, LUT-yliopisto, Lahti
+Lappeenrannan-Lahden teknillinen yliopisto LUT, LUT-yliopisto, Lappeenranta
+Svenska handelshögskolan
+Svenska handelshögskolan, Hanken Helsingfors
+Svenska handelshögskolan, Hanken Vasa
+Tammerfors universitet
+Tammerfors universitet, Informaatioteknologian ja viestinnän tiedekunta
+Tammerfors universitet, Informaatioteknologian ja viestinnän tiedekunta, Pori
+Tammerfors universitet, Informaatioteknologian ja viestinnän tiedekunta, Seinäjoki
+Tammerfors universitet, Johtamisen ja talouden tiedekunta
+Tammerfors universitet, Johtamisen ja talouden tiedekunta, Pori
+Tammerfors universitet, Kasvatustieteiden ja kulttuurin tiedekunta
+Tammerfors universitet, Lääketieteen ja terveysteknologian tiedekunta
+Tammerfors universitet, Rakennetun ympäristön tiedekunta
+Tammerfors universitet, Tekniikan ja luonnontieteiden tiedekunta
+Tammerfors universitet, Tekniikan ja luonnontieteiden tiedekunta, Seinäjoki
+Tammerfors universitet, Yhteiskuntatieteiden tiedekunta
+Tammerfors universitet, Yhteiskuntatieteiden tiedekunta, Pori
+Uleåborgs universitet
+Uleåborgs universitet, Biokemian ja molekyylilääketieteen tiedekunta
+Uleåborgs universitet, Humanistinen tiedekunta
+Uleåborgs universitet, Kasvatustieteiden ja psykologian tiedekunta
+Uleåborgs universitet, Kauppakorkeakoulu
+Uleåborgs universitet, Luonnontieteellinen tiedekunta
+Uleåborgs universitet, Lääketieteellinen tiedekunta
+Uleåborgs universitet, Teknillinen tiedekunta
+Uleåborgs universitet, Tieto- ja sähkötekniikan tiedekunta
+Vasa universitet
+Vasa universitet, Johtamisen yksikkö
+Vasa universitet, Kauppatieteellinen ala
+Vasa universitet, Laskentatoimen ja rahoituksen yksikkö
+Vasa universitet, Markkinoinnin ja viestinnän yksikkö
+Vasa universitet, Tekniikan ja innovaatiojohtamisen yksikkö
+Åbo Akademi
+Åbo Akademi, Fakulteten för humaniora, psykologi och teologi
+Åbo Akademi, Fakulteten för naturvetenskaper och teknik
+Åbo Akademi, Fakulteten för naturvetenskaper och teknik, Vasa
+Åbo Akademi, Fakulteten för pedagogik och välfärdsstudier
+Åbo Akademi, Fakulteten för samhällsvetenskaper, ekonomi och juridik
+Åbo Akademi, Fakulteten för samhällsvetenskaper, ekonomi och juridik, Vasa
+Åbo universitet
+Åbo universitet, Humanistinen tiedekunta
+Åbo universitet, Humanistinen tiedekunta, Pori
+Åbo universitet, Kasvatustieteiden tiedekunta
+Åbo universitet, Kasvatustieteiden tiedekunta, Rauma
+Åbo universitet, Lääketieteellinen tiedekunta
+Åbo universitet, Matemaattis-luonnontieteellinen tiedekunta
+Åbo universitet, Oikeustieteellinen tiedekunta
+Åbo universitet, Teknillinen tiedekunta
+Åbo universitet, Turun kauppakorkeakoulu
+Åbo universitet, Turun kauppakorkeakoulu, Porin yksikkö
+Åbo universitet, Yhteiskuntatieteellinen tiedekunta
+Östra Finlands Universitet
+Östra Finlands Universitet, Faculty of Social Sciences and Business Studies, Joensuun kampus
+Östra Finlands Universitet, Faculty of Social Sciences and Business Studies, Kuopion kampus
+Östra Finlands Universitet, Filosofiska fakulteten, Joensuun kampus
+Östra Finlands Universitet, Hälsovetenskapliga fakulteten, Kuopion kampus
+Östra Finlands Universitet, Luonnontieteiden, metsätieteiden ja tekniikan tiedekunta, Joensuun kampus
+Östra Finlands Universitet, Luonnontieteiden, metsätieteiden ja tekniikan tiedekunta, Kuopion kampus
