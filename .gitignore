@@ -208,6 +208,9 @@ env/
 *.suo
 *.user
 .DS_Store
+.vs/
+[Bb]in/
+[Oo]bj/
 
 # Extra ignore 
 .env
@@ -225,3 +228,6 @@ processed_data/
 
 # SSIS Project files
 *.dtproj.user
+*.sln.docstates
+bin/
+obj/

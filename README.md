@@ -59,6 +59,19 @@ The outcome of this automated pipeline is a single, clean file: `processed_data/
 
 The final step of preparation was to design and deploy a SQL database schema for storing this data efficiently for analysis. Wanting to learn more I choose a **Star Schema**, this is supposed to be industry best practice for BI and a nice learning opportunity. It uses small efficient dimension tables for descriptive data (DimGender, DimUniversity, etc.,).
 
-To also simulate a professional environment, with environment variables, I made used of SQLCMD for DatabaseNames to be reusable, in line with the Python Pipeline script.
+To also simulate a professional environment, with environment variables, `SQLCMD` was used for DatabaseNames to be reusable.
 
-## Part 2
+## Part 2: ETL Pipeline with SSIS
+
+The next phase was to build an enterprise-grade ETL (Extract, Transform, Load) pipeline to populate the database using **SQL Server Integration Services (SSIS)**.
+
+The complete SSIS solution can be found in the `2_ETL_SSIS/` directory and includes:
+
+*   `SQL_SSIS_Analytics_Pipeline_Project.sln` - The Visual Studio solution file.
+*   `Package.dtsx` - The SSIS package file containing all the ETL logic described below.
+
+A step-by-step explanation of the ETL architecture, including screenshots of the Control Flow and Data Flows, is available in the [ETL Process Walkthrough](./2_ETL_SSIS/etl_walkthrough.md).
+
+## Part 3: BI Reporting & Visualization (Next Steps)
+
+The final phase of this project will be to connect to the newly populated SQL database and build an interactive dashboard using **Microsoft Power BI**. This dashboard will be designed to provide clear, actionable insights into the admissions data, showcasing skills in data analysis, DAX, and data visualization.
