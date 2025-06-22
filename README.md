@@ -53,4 +53,12 @@ The outcome of this automated pipeline is a single, clean file: `processed_data/
 
 *   **Structure:** A flat, "tidy" table with over 60,000 rows of granular data.
 *   **Columns:** `Year`, `Gender`, `AgeGroup`, `University`, `Faculty`, `ProgramName`, `FirstTimeApplicants`, `TotalApplicants`, `Admitted`.
-*   **Value:** This clean, consolidated CSV file eliminates the initial data sourcing problem and serves as the perfect foundation for **Part 2: Loading the data into a structured SQL database using SSIS.**
+*   **Value:** This clean, consolidated CSV file eliminates the initial data sourcing problem
+
+### 5. Database Design
+
+The final step of preparation was to design and deploy a SQL database schema for storing this data efficiently for analysis. Wanting to learn more I choose a **Star Schema**, this is supposed to be industry best practice for BI and a nice learning opportunity. It uses small efficient dimension tables for descriptive data (DimGender, DimUniversity, etc.,).
+
+To also simulate a professional environment, with environment variables, I made used of SQLCMD for DatabaseNames to be reusable, in line with the Python Pipeline script.
+
+## Part 2
