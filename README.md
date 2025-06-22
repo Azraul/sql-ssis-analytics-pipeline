@@ -1,17 +1,17 @@
 # SQL & SSIS Analytics Platform and Pipeline
-This project is a demonstration of a full data pipeline, developed to showcase the core competencies for a Data Specialist roles. It transforms a series of raw, difficult-to-use public data reports from [Vipunen.fi](https://vipunen.fi/en-gb/) into a clean, structured MS SQL database, processes it with SSIS and visualizes it with an interactive Power BI dashboard.
-
+This project was a personal deep-dive into building a full, end-to-end data pipeline from scratch. My goal was to tackle a genuinely messy, real-world data problem and see it through every stage: from sourcing ([Vipunen.fi](https://vipunen.fi/en-gb/)) and Python scripting, to database design and ETL with SSIS, all the way to a polished, interactive dashboard in Power BI.
 
 ## Objective
 
 This project simulates a full data pipeline, including:
-1.  **Database Management:** Designing and deploying a relational database on MS SQL Server.
-2.  **ETL Processes:** Extracting data from source files and loading it into the database.
-3.  **BI & Reporting:** Creating an interactive dashboard with Power BI.
+1.  **Data Sourcing & Transformation:** Engineering a robust Python script to automate the cleaning of messy, real-world data.
+2.  **Database Management & ETL:** Designing and deploying a relational database on MS SQL Server and building an SSIS pipeline to populate it.
+3.  **BI & Reporting:** Creating a dynamic, user-centric dashboard with Power BI to derive and present actionable insights.
 
 ## Project Status
 
-*Ground truth data aquired, next phase: loading the data into the SQL database.*
+**Completed.** All three project phases are finished. The final interactive dashboard is available for review at the bottom.
+
 
 ## Part 1: Data Sourcing & Automated Transformation
 
@@ -22,7 +22,7 @@ This project simulates a full data pipeline, including:
 The project began by sourcing admissions data from the Finnish education statistics portal, [Vipunen.fi](https://vipunen.fi/en-gb/). Initial investigation revealed a significant business challenge:
 
 *   **No Raw Data Access:** Instead of providing raw data files, the portal utilizes a Single-Page Application (SPA) to embed a Microsoft Excel Online instance. This architecture, likely using Microsoft's WOPI protocol, is designed for interactive user reports, creating a significant barrier to automated data extraction.
-*   **Manual, Repetitive Work Required:** The only way to acquire detailed data was to manually filter and download dozens of individual report files. I choose a limited dataset of 3 years, broken down by gender and 16 separate age groups. This required downloading and managing over 100 individual `.xlsb` report files.
+*   **Manual, Repetitive Work Required:** The only way to acquire detailed data was to manually filter and download dozens of individual report files. To keep the project manageable (*and for my own sanity*), I chose a dataset of 3 years, broken down by gender and 16 separate age groups. Even with this scope, the process meant manually downloading and organizing over 100 individual .xlsb files before the real work could even begin.
 
 ### 2. The Data Transformation Challenge
 
@@ -35,7 +35,7 @@ Vipunens raw `.xlsb` files were formatted for visual reporting, not machine proc
 
 ### 3. The Solution: An Automated Python Pipeline
 
-`1_Database/process_data.py` is a script that solves these challenges. It is a reusable asset that fully automates the cleaning of the raw report files.
+To solve this, I wrote [1_Database/process_data.py](./1_Database/process_data.py). My goal was to create a script that could take the folder of messy files and, with one click, automate the entire cleaning process.
 
 The script performs the following steps:
 1.  **Loads a Master Institution List:** Reads the `institutions.txt` file to know all valid University and Faculty names in advance.
@@ -57,13 +57,15 @@ The outcome of this automated pipeline is a single, clean file: `processed_data/
 
 ### 5. Database Design
 
-The final step of preparation was to design and deploy a SQL database schema for storing this data efficiently for analysis. Wanting to learn more I choose a **Star Schema**, this is supposed to be industry best practice for BI and a nice learning opportunity. It uses small efficient dimension tables for descriptive data (DimGender, DimUniversity, etc.,).
+The final step of this phase was to design the database schema. I wanted a classic `Star Schema` (as a learning opportunity), but during development it naturally evolved into a `Snowflake Schema`, as it felt like a more robust design for the situation.
 
-To also simulate a professional environment, with environment variables, `SQLCMD` was used for DatabaseNames to be reusable.
+The `FactAdmissions` table connects to `DimProgram`, which in turn connects to `DimUniversity`. This Snowflake design offers superior data integrity and storage efficiency, ensuring that university or faculty details only need to be updated in a single location.
+
+To also simulate a professional environment, `SQLCMD` variables were used to make DatabaseNames and file paths reusable and configurable.
 
 ## Part 2: ETL Pipeline with SSIS
 
-The next phase was to build an enterprise-grade ETL (Extract, Transform, Load) pipeline to populate the database using **SQL Server Integration Services (SSIS)**.
+The next phase was to build an ETL (Extract, Transform, Load) pipeline to populate the database. I chose to use **SQL Server Integration Services (SSIS)** to get hands-on experience with a traditional, enterprise-grade tool.
 
 The complete SSIS solution can be found in the `2_ETL_SSIS/` directory and includes:
 
@@ -74,4 +76,30 @@ A step-by-step explanation of the ETL architecture, including screenshots of the
 
 ## Part 3: BI Reporting & Visualization (Next Steps)
 
-The final phase of this project will be to connect to the newly populated SQL database and build an interactive dashboard using **Microsoft Power BI**. This dashboard will be designed to provide clear, actionable insights into the admissions data, showcasing skills in data analysis, DAX, and data visualization.
+The final phase of the project was to connect to the populated SQL database and build an interactive dashboard using **Microsoft Power BI**. The goal was not simply to display data, but to create an intuitive and insightful analytical application that allows users to explore the complex admissions landscape. The complete Power BI project file (`.pbix`) can be found in the `3_BI_Dashboard/` directory.
+
+### 1. Advanced Analytics with DAX
+
+To bring the dashboard to life, I leaned heavily on DAX measures rather than simple drag-and-drop columns. This gave me much more control and allowed for some neat features:
+
+*   **Core KPIs:** `Total Applicants`, `Total Admitted`, and `Acceptance Rate %`.
+*   **Time Intelligence:** `YoY Applicant Growth %` to track trends over time, using a dedicated `DimDate` table.
+*   **Dynamic Ratios:** `Female Applicant Ratio %` and `Male Applicant Ratio %` to analyze demographic shifts.
+*   **Advanced Normalization:** A `[% of University's Applicants by Age Group]` measure to enable the heatmap visual on the final report page, normalizing data and allowing for fair comparison between universities of different sizes.
+*   **Dynamic Text:** A measure was built to generate dynamic page titles (e.g., "Deep Dive: University X") that respond to user selections.
+
+### 2. User-Centric Design and Theming
+
+I believe a good dashboard should be a pleasure to use, so I spent a lot of time on the design and user experience to make sure it felt polished and intuitive.
+
+*   **Custom Theme:** To create a more immersive experience a specific University logo was sourced, while a JSON theme was crafted with specific colors (`#001522`, `#A5C5E9`, `#E3006F`) and very elegant font (`Georgia`). Perhaps you can guess which one? 
+*   **Multi-Page Structure:** The report is structured into three logical pages (`Executive Overview`, `University Deep Dive`, `Applicant Demographics`), guiding the user from a high-level summary to detailed analysis.
+*   **Data Integrity & Best Practices:** The data model was refined throughout the project, including cleaning dimension tables, replacing text-based keys with efficient numeric surrogate keys, and establishing a professional Snowflake Schema. Custom sort orders were implemented to ensure logical presentation of data (e.g., Age Groups).
+
+### 3. Final Interactive Dashboard
+
+The final result is a fully interactive multi-page report that allows for a comprehensive analysis of Finnish university admissions data. The Power BI report, [3_BI_Dashboard/admission_analytics_dashboard.pbix](./3_BI_Dashboard/admission_analytics_dashboard.pbix) is available in the repository.
+
+![Power BI Dashboard Demo](./3_BI_Dashboard/assets/dashboard_animation.gif)
+
+*(Note: Public embedding is restricted on personal Power BI accounts. This GIF demonstrates the full interactivity of the report, from cross-filtering on the overview page to the dynamic titles and drill-down capabilities on the detail pages.)*
